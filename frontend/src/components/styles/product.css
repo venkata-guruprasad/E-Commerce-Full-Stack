@@ -1,0 +1,92 @@
+.search-row {
+    padding: 12px 0;
+}
+
+.search-row input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.add-btn {
+    background: #0b74de;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.popup {
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); /* 👈 center fix */
+    
+    background: #222;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    animation: slideDown 0.3s ease, fadeOut 0.3s ease 1.7s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -50px); /* 👈 both X & Y combine */
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, 0); /* 👈 smooth ga down ki */
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
