@@ -16,7 +16,7 @@ export default function Checkout({ onDone }) {
         }
         setLoading(true);
         try {
-            const res = await fetch('http://localhost:4000/api/orders', {
+            const res = await fetch('https://e-commerce-full-stack-backend-mnc7.onrender.com/api/orders', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...form, items, total })
